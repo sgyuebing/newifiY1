@@ -1,0 +1,40 @@
+
+config system
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+	option timezone 'CST-8'
+	option zonename 'Asia/Shanghai'
+	option hostname 'Newifi-Y1'
+	option description 'MMDVM路由热点'
+	option notes '感谢BD7MQB老师的源码'
+	option log_proto 'udp'
+	option conloglevel '8'
+	option cronloglevel '5'
+
+config timeserver 'ntp'
+	list server 'ntp.tencent.com'
+	list server 'ntp1.aliyun.com'
+	list server 'ntp.ntsc.ac.cn'
+	list server 'cn.ntp.org.cn'
+
+config led 'led_wifi'
+	option name 'WIFI'
+	option sysfs 'blue:wifi'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'wlan1'
+
+config led 'led_wifi5g'
+	option name 'WIFI5G'
+	option sysfs 'blue:wifi5g'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'wlan0'
+
+config led 'led_lan'
+	option name 'LAN'
+	option sysfs 'blue:lan'
+	option trigger 'switch0'
+	option port_mask '0x03'
+
