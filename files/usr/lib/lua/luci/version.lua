@@ -16,5 +16,5 @@ else
 	distversion = "Development Snapshot"
 end
 
-luciname    = "优酷路由宝"
+luciname    = "路由"
 luciversion = "MMDVM 热点 2023.08.02"
